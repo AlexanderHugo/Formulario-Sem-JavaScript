@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário sem JavaScript</title>
+
+<style>
+
+    body {
+        background: #69C;
+        
+    }
+    
+    h1 {
+        text-align: center; font-style: italic; font-size: 42pt;
+    }
+    
+    div.all {background: transparent;}
+    
+    span.itens {
+        font-size: 18pt;
+        color: #020226;
+        font-weight: bolder;
+    }
+    
+    input {
+        transition: all 0.2s ease; 
+        font-size: 14pt;
+        background-color: #fff;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    
+    input:invalid{ background-color: #fcc ; color: red; }
+    
+</style>
+    
+</head>
+
+<body>
+    
+    <form name="form" method="post" action="">
+    
+        <h1>Formulário validado com HTML5</h1>
+        
+      <div class="all"><span class="itens" id="item1">Nome:</span><input id="nome" type="text" placeholder="Insira seu nome aqui..." autofocus required title="Ex: Matheus"/><br/>
+        
+        <span class="itens" id="item2">E-mail:</span><input id="email" type="email" placeholder="Insira seu e-mail aqui..." autofocus required title="Ex: exemplo@exemplo.com"/><br/>
+        
+        <span class="itens" id="item3">Idade: </span><input id="idade" type="number" autofocus required min="15" max="100" title="Somente valores entre 15 e 100."/><br/>
+        
+        <span class="itens" id="item4">CEP:</span><input id="cep" type="text" pattern="\d{5}-?\d{3}" title="Preencha o CEP corretamente. Ex: 00000-00" autofocus required/><br/>
+        
+        <span class="itens" id="item5">Logradouro:</span><input id="rua" type="text" autofocus required title="Ex: Rua josé couto" placeholder="Ex: Rua José"/><br/>
+        
+        <span class="itens" id="item6">Número: </span><input id="num" type="number" autofocus required title="Ex: 1980"/><br/>
+        
+        <span class="itens" id="item7">Complemento:</span><input id="comp" type="text" autofocus title="Ex: Apartamento"/><br/>
+        
+        <span class="itens" id="item8">Bairro:</span><input id="bairro" type="text" autofocus title="Ex: Olinda" placeholder="Digite seu bairro aqui..." required/><br/>
+        
+        <span class="itens" id="item9">Cidade:</span><input id="cidade" type="text" autofocus title="Ex: Rio de Janeiro" placeholder="Digite sua cidade aqui..." required/><br/>
+        
+        <span class="itens" id="item10">Estado:</span><input id="estado" type="text" autofocus title="Ex: Rio de Janeiro" placeholder="Digite seu estado aqui..." required/><br/>
+        
+        <span class="itens" id="item11">País:</span><input id="pais" type="text" autofocus title="Ex: Brasil" placeholder="Digite seu país aqui..." required/><br/>
+        
+        <span class="itens" id="item8">CPF:</span><input id="cpf" type="text" autofocus required pattern="\d{3}.\d{3}.\d{3}-\d{2}" title="Ex: 000.000.000-00" title=""/><br/>
+        
+        <span class="itens">Sexo:</span><input type="radio" name="sex" value="male" title="Masculino, Male"><span class="itens">Maculino</span>
+        <input type="radio" name="sex" value="female" title="Feminino, Female"><span class="itens">Feminino</span><br/>
+        <span class="itens">Tel. Residêncial:</span><input type="tel" title="Ex: 3761-1212" placeholder="Ex: 3761-1212" required pattern="\d{4}-\d{4}"/><br/>
+        
+        <span class="itens">Tel. Celular:</span><input type="tel" title="Ex: 96853-3423" placeholder="Ex:(21) 9 6853-3648" required maxlength="16"/><br/>
+          
+        <input type="checkbox" title="Deve marcar esta opção para continuar" required/><span style="itens">Você concorda em que ao clicar nesta opção, estará nos enviando seus dados. Seus dados estarão protegidos em nosso Banco de Dados.</span><br/>
+        <input type="reset" value="Limpar" title="Limpa todos os dados"/>
+        <input type="submit" value="Enviar" title="Envia os dados"/>
+    
+    </form>
+    
+    <div id="caixinha">
+    <h4><span style="font-weight: bolder;">Obs: </span>Campos com o fundo <span style="background-color: #fcc;color: #000;">vermelho claro</span> são <span style="color:#ed1616;">obrigatórios</span> ou estão <span style="color:#ed1616;">preenchidos incorretamente</span>.<br/>Quando não souber como preencher o campo, coloque o mouse em cima do mesmo.</h4>
+    </div>
+    </div>
+</body>
+</html>
